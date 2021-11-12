@@ -150,7 +150,7 @@ class Ui_MainWindow(object):
         frame = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         image = QImage(frame,frame.shape[1],frame.shape[0],frame.strides[0],QImage.Format_RGB888)
         self.lbImage.setPixmap(QtGui.QPixmap.fromImage(image))
-    
+#ddd
     def changeRed(self,value):
         self.GNoiseVar = (value/100.0)**2
         self.tempimg = AddGaussianNoise(self.image,self.GNoiseSeed,self.GNoiseMean,self.GNoiseVar)
