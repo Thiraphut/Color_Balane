@@ -12,8 +12,7 @@ from math import cosh
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtGui import QImage
-from Functions import *
-
+import cv2, imutils
 
 class Ui_Main(object):
     def setupUi(self, Main):
