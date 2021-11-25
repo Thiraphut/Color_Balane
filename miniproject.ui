@@ -57,16 +57,6 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Color Balancing&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="redBox">
-    <property name="geometry">
-     <rect>
-      <x>1090</x>
-      <y>191</y>
-      <width>51</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -83,26 +73,6 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="text">
      <string>Color Level</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="greenBox">
-    <property name="geometry">
-     <rect>
-      <x>1090</x>
-      <y>260</y>
-      <width>51</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="blueBox">
-    <property name="geometry">
-     <rect>
-      <x>1090</x>
-      <y>330</y>
-      <width>51</width>
-      <height>31</height>
-     </rect>
     </property>
    </widget>
    <widget class="QWidget" name="layoutWidget">
@@ -240,6 +210,45 @@ p, li { white-space: pre-wrap; }
      <string>Reset</string>
     </property>
    </widget>
+   <widget class="QLabel" name="redValue">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>200</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="greenValue">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>270</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="blueValue">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>340</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -370,48 +379,48 @@ p, li { white-space: pre-wrap; }
   <connection>
    <sender>redSlider</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>redBox</receiver>
-   <slot>clear()</slot>
+   <receiver>redValue</receiver>
+   <slot>setNum(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1073</x>
-     <y>228</y>
+     <x>1078</x>
+     <y>229</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1099</x>
-     <y>228</y>
+     <x>1092</x>
+     <y>224</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>greenSlider</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>greenBox</receiver>
-   <slot>clear()</slot>
+   <receiver>greenValue</receiver>
+   <slot>setNum(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1069</x>
-     <y>301</y>
+     <x>1075</x>
+     <y>298</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1094</x>
-     <y>302</y>
+     <x>1112</x>
+     <y>296</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>blueSlider</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>blueBox</receiver>
-   <slot>clear()</slot>
+   <receiver>blueValue</receiver>
+   <slot>setNum(int)</slot>
    <hints>
     <hint type="sourcelabel">
      <x>1063</x>
      <y>367</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1109</x>
-     <y>368</y>
+     <x>1125</x>
+     <y>369</y>
     </hint>
    </hints>
   </connection>
